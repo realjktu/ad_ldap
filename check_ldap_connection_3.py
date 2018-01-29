@@ -16,7 +16,7 @@ def main():
     base_dn = 'dc=domain4,dc=local'
     username = 'cyberx3'
     password = 'cruvuttj@4338'
-    krb5_config_path = '/home/jktu/stuff/check_ldap_connection_krb5.ini'  # Path to Kerberos config file or None to use system Kerberos config.
+    krb5_config_path = './check_ldap_connection_krb5.ini'  # Path to Kerberos config file or None to use system Kerberos config.
     #krb5_config_path = None
     krb = KerberosClient(username=username, realm=domain, password=password, krb5_config_path=krb5_config_path)
     with LDAPClient(host=address, username=username, password=password, domain=domain, authentication_mechanism='GSSAPI', base_dn=base_dn) as ldap_client:
