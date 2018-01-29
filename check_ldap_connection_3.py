@@ -40,7 +40,7 @@ class KerberosClient(object):
         kinit.wait()
         kinit_res = kinit.stderr.read()
         if kinit.returncode > 0:
-	    print("Cannot initialize Kerberos. Error is: {}".format(kinit.stderr.read()))
+	    print("Cannot initialize Kerberos. Error is: {}".format(kinit_res))
 	    sys.exit(kinit.returncode)
 
     def destroy(self):
