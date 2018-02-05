@@ -1,8 +1,8 @@
-ldap_host = '192.168.153.200'
-domain = 'domain1.local'
-user = 'cyberx1'
+ldap_host = '192.168.153.203'
+domain = 'domain3.local'
+user = 'cyberx3'
 password = 'cruvuttj@4338'
-search_base = 'cn=Users,dc=domain1,dc=local'
+search_base = 'cn=Users,dc=domain4,dc=local'
 
 from ldap3 import Server, \
     Connection, \
@@ -16,10 +16,9 @@ try:
                         version=3,
                         auto_bind=True,
                         raise_exceptions=True,
-user=domain+'\\'+user,
-#user=user+'@'+domain,
-password=password,
-authentication=NTLM                    
+                        user=domain+'\\'+user,
+                        password=password,
+                        authentication=NTLM                    
     					)
 except:
     print("Cannot connect to LDAP server")
