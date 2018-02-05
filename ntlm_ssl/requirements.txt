@@ -1,0 +1,16 @@
+cryptography
+decorator
+enum34
+gssapi
+idna
+ipaddress
+keyring
+keyrings.alt
+pyasn1
+pycrypto
+pygobject
+ldap3
+pyxdg
+sasl
+SecretStorage
+six
