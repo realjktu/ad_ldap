@@ -32,7 +32,14 @@ class LDAPClient(object):
         self._session = None
 
     def connect(self):
+        ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_NEVER)
         session = ldap.initialize(self.host, trace_level=0)
+        session.set_option(ldap.OPT_REFERRALS, 0)
+        session.set_option(ldap.OPT_PROTOCOL_VERSION, 3)
+        session.set_option(ldap.OPT_X_TLS,ldap.OPT_X_TLS_DEMAND)
+        session.set_option( ldap.OPT_X_TLS_DEMAND, True )
+        session.set_option( ldap.OPT_DEBUG_LEVEL, 255 )
+
         session.set_option(ldap.OPT_REFERRALS, 0)
 
         sasl_auth = ldap.sasl.sasl({
