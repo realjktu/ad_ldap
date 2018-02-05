@@ -4,7 +4,7 @@
 
 3. pip install -r requirements.txt
 
-4. Enable LDAP over SSL by the folloiwng document enable_LDAPS_ActiveDirectory.md
+4. Enable LDAP over SSL by the folloiwng document [enable_LDAPS_ActiveDirectory.md](enable_LDAPS_ActiveDirectory.md)
 
 4. Enable NTLM on Windows 2008 https://support.microsoft.com/en-us/help/935834/how-to-enable-ldap-signing-in-windows-server-2008
 
