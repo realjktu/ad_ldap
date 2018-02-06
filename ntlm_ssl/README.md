@@ -1,9 +1,11 @@
 CentOS:
+
 1.1. yum install -y epel-release
 
 2.1. yum install -y git python python-pip cyrus-sasl-ntlm gcc python-devel openldap-devel gcc-c++
 
 Ubuntu:
+
 1.1. apt-get -y install python-pip
 
 2. pip install -r requirements.txt
